@@ -17,11 +17,11 @@
   </cxf:bus>
  
    <!--  	
-  <bean id="actorSystemBean" class="com.diebold.agilis.beans.ActorSystemBean">
-        <property name="actorRefFactory" ref="actorSystem"/>  
+  <bean id="actorSystemBean" class="com.organization.app.beans.ActorSystemBean">
+        <property name="actorRefFactory" ref="appActorSystem"/>  
   </bean>
      		
-  <reference id="actorSystem" interface="akka.actor.ActorRefFactory">
+  <reference id="appActorSystem" interface="akka.actor.ActorRefFactory">
   </reference>
   -->  
 </blueprint>  

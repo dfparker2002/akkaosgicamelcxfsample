@@ -11,9 +11,9 @@
   	
   	<!--  
   	
-  	<akka:actor-system name="AgilisServerSystem" id="agilisServerSystem"/>
+  	<akka:actor-system name="AppActorSystem" id="appActorSystem"/>
   	
-  	<service id="actorSystem" ref="agilisServerSystem" interface="akka.actor.ActorRefFactory"/>
+  	<service id="appActorSystemService" ref="appActorSystem" interface="akka.actor.ActorRefFactory"/>
   	-->
   	
   	<!--  
