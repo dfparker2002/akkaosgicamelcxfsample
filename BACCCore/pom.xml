@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.organization.app</groupId>
+    <artifactId>BACCBundles</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>BACCCore</artifactId>
+  <packaging>bundle</packaging>
+  
+  <name>BACCCore</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.felix</groupId>
+              <artifactId>maven-bundle-plugin</artifactId>
+              <version>2.3.7</version>
+              <extensions>true</extensions>
+              <configuration>
+                  <instructions>
+                      <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                      <Bundle-Version>${project.version}</Bundle-Version>
+                      <Bundle-Activator>com.organization.app.activation.ServiceActivator</Bundle-Activator>
+                      <Export-Package>com.organization.app.service*;version=${project.version}</Export-Package>
+                      <Import-Package>*</Import-Package>
+                  </instructions>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+</project>
